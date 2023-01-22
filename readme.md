@@ -4,7 +4,7 @@ Essa aplicação conta com um back-end feito em Node.js, um front-end web feito 
 
 <hr>
 
-## Qual o propódito dessa aplicação?
+## Qual o propósito dessa aplicação?
 Essa aplicação foi feita para você ter uma maneira rápida e simples de monitorar seus hábitos do dia a dia para concluir uma meta.
 
 ## Quais são as funcionalidades dessa aplicação?
