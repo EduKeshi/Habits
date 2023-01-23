@@ -18,7 +18,7 @@ interface HabitsInfo {
     completedHabits: string[]
 }
 
-export function HabitsList({ date, onCompletedChanged}: HabitsListProps) {
+export function HabitsList({ date, onCompletedChanged }: HabitsListProps) {
     const [habitsInfo, setHabitsInfo] = useState<HabitsInfo>()
 
     useEffect(() => {
@@ -37,7 +37,7 @@ export function HabitsList({ date, onCompletedChanged}: HabitsListProps) {
 
         await api.patch(`/habits/${habitId}/toggle`)
 
-        if(isHabitAlreadyCompleted) {
+        if (isHabitAlreadyCompleted) {
             completedHabits = habitsInfo!.completedHabits.filter(id => id != habitId)
         } else {
             completedHabits = [...habitsInfo!.completedHabits, habitId]
@@ -54,7 +54,7 @@ export function HabitsList({ date, onCompletedChanged}: HabitsListProps) {
     const isDateInPast = dayjs(date).endOf("day").isBefore(new Date())
 
     return (
-        <div className="mt-6 flex flex-col gap-3">
+        <div className="mt-6 flex flex-col gap-3 h-96 pb-10 hover:overflow-auto">
             {habitsInfo?.possibleHabits.map(habit => {
                 return (
                     <Checkbox.Root
